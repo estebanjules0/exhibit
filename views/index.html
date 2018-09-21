@@ -53,8 +53,6 @@
       const socket = io('http://localhost');
     </script> -->
     <script type="text/javascript">
-      var port = normalizePort(process.env.PORT || '3000');
-      console.log(port);
       var socket = io.connect("/");
       $("#myonoffswitch").change(function(){
           socket.emit("stateChanged", this.checked);
